@@ -1,0 +1,444 @@
+2024-12-15T10:57:16.322+09:00  INFO 46513 --- [orders] [main] com.example.orders.OrdersApplication     : Starting OrdersApplication using Java 21.0.2 with PID 46513 (/Users/nadagrinko/Desktop/java/online-shop-micro&kafka/orders/target/classes started by nadagrinko in /Users/nadagrinko/Desktop/java/online-shop-micro&kafka)
+2024-12-15T10:57:16.326+09:00  INFO 46513 --- [orders] [main] com.example.orders.OrdersApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-12-15T10:57:16.977+09:00  INFO 46513 --- [orders] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-15T10:57:17.012+09:00  INFO 46513 --- [orders] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interface.
+2024-12-15T10:57:17.316+09:00  INFO 46513 --- [orders] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2024-12-15T10:57:17.323+09:00  INFO 46513 --- [orders] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-15T10:57:17.323+09:00  INFO 46513 --- [orders] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-12-15T10:57:17.347+09:00  INFO 46513 --- [orders] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-15T10:57:17.348+09:00  INFO 46513 --- [orders] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 971 ms
+2024-12-15T10:57:17.362+09:00  INFO 46513 --- [orders] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-15T10:57:17.448+09:00  INFO 46513 --- [orders] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:test_db user=USER
+2024-12-15T10:57:17.448+09:00  INFO 46513 --- [orders] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-15T10:57:17.461+09:00  INFO 46513 --- [orders] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:test_db'
+2024-12-15T10:57:17.516+09:00  INFO 46513 --- [orders] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-15T10:57:17.544+09:00  INFO 46513 --- [orders] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-15T10:57:17.560+09:00  INFO 46513 --- [orders] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-15T10:57:17.684+09:00  INFO 46513 --- [orders] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-15T10:57:18.039+09:00  INFO 46513 --- [orders] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-15T10:57:18.063+09:00  INFO 46513 --- [orders] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-15T10:57:18.237+09:00  WARN 46513 --- [orders] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-15T10:57:18.455+09:00  INFO 46513 --- [orders] [main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:29092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = orders-admin-0
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2024-12-15T10:57:18.539+09:00  INFO 46513 --- [orders] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2024-12-15T10:57:18.539+09:00  INFO 46513 --- [orders] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2024-12-15T10:57:18.540+09:00  INFO 46513 --- [orders] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1734227838539
+2024-12-15T10:57:18.694+09:00  INFO 46513 --- [orders] [kafka-admin-client-thread | orders-admin-0] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for orders-admin-0 unregistered
+2024-12-15T10:57:18.696+09:00  INFO 46513 --- [orders] [kafka-admin-client-thread | orders-admin-0] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2024-12-15T10:57:18.696+09:00  INFO 46513 --- [orders] [kafka-admin-client-thread | orders-admin-0] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-12-15T10:57:18.696+09:00  INFO 46513 --- [orders] [kafka-admin-client-thread | orders-admin-0] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2024-12-15T10:57:18.724+09:00  INFO 46513 --- [orders] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
+2024-12-15T10:57:18.740+09:00  INFO 46513 --- [orders] [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:29092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-orders-service-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = orders-service-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-12-15T10:57:18.761+09:00  INFO 46513 --- [orders] [main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2024-12-15T10:57:18.793+09:00  INFO 46513 --- [orders] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2024-12-15T10:57:18.793+09:00  INFO 46513 --- [orders] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2024-12-15T10:57:18.793+09:00  INFO 46513 --- [orders] [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1734227838793
+2024-12-15T10:57:18.794+09:00  INFO 46513 --- [orders] [main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-orders-service-group-1, groupId=orders-service-group] Subscribed to topic(s): update_order_status
+2024-12-15T10:57:18.805+09:00  INFO 46513 --- [orders] [main] com.example.orders.OrdersApplication     : Started OrdersApplication in 2.926 seconds (process running for 3.463)
+2024-12-15T10:57:18.808+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-orders-service-group-1, groupId=orders-service-group] Cluster ID: eBDXtFWnTDa4jmWtdtaB1w
+2024-12-15T10:57:18.810+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-orders-service-group-1, groupId=orders-service-group] Discovered group coordinator localhost:29092 (id: 2147483646 rack: null)
+2024-12-15T10:57:18.811+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-orders-service-group-1, groupId=orders-service-group] (Re-)joining group
+2024-12-15T10:57:18.826+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-orders-service-group-1, groupId=orders-service-group] Request joining group due to: need to re-join with the given member-id: consumer-orders-service-group-1-a27e87b5-fece-488e-9f7a-58a27b152131
+2024-12-15T10:57:18.827+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-orders-service-group-1, groupId=orders-service-group] (Re-)joining group
+2024-12-15T10:57:21.864+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-orders-service-group-1, groupId=orders-service-group] Successfully joined group with generation Generation{generationId=9, memberId='consumer-orders-service-group-1-a27e87b5-fece-488e-9f7a-58a27b152131', protocol='range'}
+2024-12-15T10:57:21.868+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-orders-service-group-1, groupId=orders-service-group] Finished assignment for group at generation 9: {consumer-orders-service-group-1-a27e87b5-fece-488e-9f7a-58a27b152131=Assignment(partitions=[update_order_status-0])}
+2024-12-15T10:57:21.900+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-orders-service-group-1, groupId=orders-service-group] Successfully synced group in generation Generation{generationId=9, memberId='consumer-orders-service-group-1-a27e87b5-fece-488e-9f7a-58a27b152131', protocol='range'}
+2024-12-15T10:57:21.901+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-orders-service-group-1, groupId=orders-service-group] Notifying assignor about the new Assignment(partitions=[update_order_status-0])
+2024-12-15T10:57:21.903+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-orders-service-group-1, groupId=orders-service-group] Adding newly assigned partitions: update_order_status-0
+2024-12-15T10:57:21.909+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-orders-service-group-1, groupId=orders-service-group] Found no committed offset for partition update_order_status-0
+2024-12-15T10:57:21.919+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-orders-service-group-1, groupId=orders-service-group] Resetting offset for partition update_order_status-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:29092 (id: 1 rack: null)], epoch=0}}.
+2024-12-15T10:57:21.919+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : orders-service-group: partitions assigned: [update_order_status-0]
+2024-12-15T10:57:22.019+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was payed 
+2024-12-15T10:57:22.019+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:22.078+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:22.079+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was delivered 
+2024-12-15T10:57:22.079+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:22.080+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:22.080+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was payed 
+2024-12-15T10:57:22.080+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:22.081+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:22.082+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was delivered 
+2024-12-15T10:57:22.082+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:22.083+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:22.083+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was payed 
+2024-12-15T10:57:22.083+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:22.083+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:22.083+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was payed 
+2024-12-15T10:57:22.083+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:22.084+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:22.084+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was delivered 
+2024-12-15T10:57:22.084+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:22.084+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:22.084+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was delivered 
+2024-12-15T10:57:22.084+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:22.084+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:22.084+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was delivered 
+2024-12-15T10:57:22.085+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:22.085+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:22.085+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was delivered 
+2024-12-15T10:57:22.085+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:22.085+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:22.085+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was payed 
+2024-12-15T10:57:22.085+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:22.086+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:22.086+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was delivered 
+2024-12-15T10:57:22.086+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:22.086+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:22.087+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was payed 
+2024-12-15T10:57:22.087+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:22.087+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:22.087+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was payed 
+2024-12-15T10:57:22.087+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:22.088+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:22.088+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was payed 
+2024-12-15T10:57:22.088+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:22.088+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:22.088+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was delivered 
+2024-12-15T10:57:22.088+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:22.088+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:22.089+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was delivered 
+2024-12-15T10:57:22.089+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:22.089+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:22.089+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was delivered 
+2024-12-15T10:57:22.089+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:22.089+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:22.089+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :2 was payed 
+2024-12-15T10:57:22.090+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 2 from BD
+2024-12-15T10:57:22.090+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  2, No value present
+2024-12-15T10:57:22.090+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :2 was delivered 
+2024-12-15T10:57:22.090+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 2 from BD
+2024-12-15T10:57:22.090+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  2, No value present
+2024-12-15T10:57:22.091+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :3 was payed 
+2024-12-15T10:57:22.091+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 3 from BD
+2024-12-15T10:57:22.091+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  3, No value present
+2024-12-15T10:57:22.092+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :3 was delivered 
+2024-12-15T10:57:22.092+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 3 from BD
+2024-12-15T10:57:22.092+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  3, No value present
+2024-12-15T10:57:22.092+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :4 was payed 
+2024-12-15T10:57:22.092+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 4 from BD
+2024-12-15T10:57:22.093+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  4, No value present
+2024-12-15T10:57:22.093+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :4 was delivered 
+2024-12-15T10:57:22.093+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 4 from BD
+2024-12-15T10:57:22.093+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  4, No value present
+2024-12-15T10:57:22.093+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :5 was payed 
+2024-12-15T10:57:22.093+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 5 from BD
+2024-12-15T10:57:22.094+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  5, No value present
+2024-12-15T10:57:22.094+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :5 was delivered 
+2024-12-15T10:57:22.094+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 5 from BD
+2024-12-15T10:57:22.094+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  5, No value present
+2024-12-15T10:57:43.752+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was delivered 
+2024-12-15T10:57:43.754+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:43.762+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:43.762+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was delivered 
+2024-12-15T10:57:43.762+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:43.763+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:43.763+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was delivered 
+2024-12-15T10:57:43.763+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:43.763+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:43.764+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was delivered 
+2024-12-15T10:57:43.764+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:43.764+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:43.764+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was delivered 
+2024-12-15T10:57:43.764+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:43.764+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:43.764+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was delivered 
+2024-12-15T10:57:43.764+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:43.765+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:43.765+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was delivered 
+2024-12-15T10:57:43.765+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:43.765+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:43.765+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was delivered 
+2024-12-15T10:57:43.765+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:57:43.766+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  1, No value present
+2024-12-15T10:57:43.766+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :2 was delivered 
+2024-12-15T10:57:43.766+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 2 from BD
+2024-12-15T10:57:43.766+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  2, No value present
+2024-12-15T10:57:43.766+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :3 was delivered 
+2024-12-15T10:57:43.766+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 3 from BD
+2024-12-15T10:57:43.766+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  3, No value present
+2024-12-15T10:57:43.767+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :4 was delivered 
+2024-12-15T10:57:43.767+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 4 from BD
+2024-12-15T10:57:43.767+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  4, No value present
+2024-12-15T10:57:43.767+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :5 was delivered 
+2024-12-15T10:57:43.767+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 5 from BD
+2024-12-15T10:57:43.767+09:00 ERROR 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Fail change status to order with ID  5, No value present
+2024-12-15T10:58:08.149+09:00  INFO 46513 --- [orders] [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-15T10:58:08.150+09:00  INFO 46513 --- [orders] [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-15T10:58:08.153+09:00  INFO 46513 --- [orders] [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-12-15T10:58:08.230+09:00  INFO 46513 --- [orders] [http-nio-8888-exec-2] c.example.orders.service.OrderService    : Created new order : Order(id=1, userId=1, product=milk, status=NEW, totalSum=239)
+2024-12-15T10:58:08.235+09:00  INFO 46513 --- [orders] [http-nio-8888-exec-2] c.example.orders.service.OrderService    : Sending order with ID: 1 to Kafka topic 'new_orders'
+2024-12-15T10:58:08.243+09:00  INFO 46513 --- [orders] [http-nio-8888-exec-2] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:29092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = orders-producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2024-12-15T10:58:08.243+09:00  INFO 46513 --- [orders] [http-nio-8888-exec-2] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2024-12-15T10:58:08.247+09:00  INFO 46513 --- [orders] [http-nio-8888-exec-2] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=orders-producer-1] Instantiated an idempotent producer.
+2024-12-15T10:58:08.254+09:00  INFO 46513 --- [orders] [http-nio-8888-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2024-12-15T10:58:08.254+09:00  INFO 46513 --- [orders] [http-nio-8888-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2024-12-15T10:58:08.254+09:00  INFO 46513 --- [orders] [http-nio-8888-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1734227888254
+2024-12-15T10:58:08.261+09:00  INFO 46513 --- [orders] [kafka-producer-network-thread | orders-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=orders-producer-1] Cluster ID: eBDXtFWnTDa4jmWtdtaB1w
+2024-12-15T10:58:08.262+09:00  INFO 46513 --- [orders] [kafka-producer-network-thread | orders-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=orders-producer-1] ProducerId set to 2001 with epoch 0
+2024-12-15T10:58:08.264+09:00  INFO 46513 --- [orders] [http-nio-8888-exec-2] c.example.orders.service.OrderService    : Order: OrderDto(id=1, userId=1, status=NEW, sum=239) successfully sent to Kafka topic 'new_orders'
+2024-12-15T10:58:08.431+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was payed 
+2024-12-15T10:58:08.431+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:58:08.439+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID: 1 change status to: PAYED
+2024-12-15T10:58:08.459+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID :1 was delivered 
+2024-12-15T10:58:08.459+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Got order by Id: 1 from BD
+2024-12-15T10:58:08.460+09:00  INFO 46513 --- [orders] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.example.orders.service.OrderService    : Order with ID: 1 change status to: DELIVERED
