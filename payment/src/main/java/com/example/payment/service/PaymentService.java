@@ -6,6 +6,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.kafka.support.Acknowledgment;
+import org.springframework.retry.annotation.Backoff;
+import org.springframework.retry.annotation.Retryable;
 import org.springframework.stereotype.Service;
 
 
@@ -23,11 +26,17 @@ public class PaymentService {
 
 
 
+    @Retryable(
+            retryFor = {Exception.class},
+            maxAttempts = 3,
+            backoff = @Backoff(delay = 2000)
+    )
     @KafkaListener(topics = "new_orders", groupId = "payment-service-group")
-    public void processPayment(String msg) {
+    public void processPayment(String msg, Acknowledgment acknowledgment) {
         try {
             OrderDto order = mapper.readValue(msg, OrderDto.class);
             logger.info("Payment get order with Id : {}  from order", order.getId());
+            acknowledgment.acknowledge();
             order.setStatus("PAYED");
             String responseMsg = mapper.writeValueAsString(order);
             // some logic with payment process ....

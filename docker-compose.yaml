@@ -32,9 +32,9 @@ services:
       ZOOKEEPER_AUTOPURGE_PURGE_INTERVAL: "0"
     networks:
       - kafka-network
-  kafka-ui:
+  kafka-uiMicro:
     image: provectuslabs/kafka-ui:latest
-    container_name: kafka-ui
+    container_name: kafka-ui2
     ports:
       - 28080:8080
     environment:

@@ -17,7 +17,7 @@ public class ConsumerService {
     private final OrderService orderService;
     private final ObjectMapper mapper;
 
-    //There was no need to do it, I added just for testing consumers work
+
     @KafkaListener(topics = "update_order_status", groupId = "orders-service-group")
     public void updateStatus(String msg) throws JsonProcessingException {
 
